@@ -1,0 +1,182 @@
+body {
+    padding: 0px;
+    margin:0px;
+    background-image: url("../images/herbe.jpg");
+}
+
+/* ****************************************************************************** */
+
+/* position des elements */
+
+.but_droit,
+.but_gauche,
+.surface_droite,
+.surface_gauche,
+.rond_centrale,
+.penalty {
+    position: absolute;
+}
+
+/* position des elements centrés verticalement */
+
+.but_droit,
+.but_gauche,
+.surface_droite,
+.surface_gauche,
+.rond_centrale,
+.penalty {
+    top: 50%;
+}
+
+/* position des elements centrés horizontalement */
+
+.milieu,
+.rond_centrale,
+.penalty {
+    left: 50%;
+}
+
+/* position des eleements a gauche */
+
+.but_gauche,
+.surface_gauche {
+    left: 100%;
+}
+
+/* position des elements a droite */
+
+.but_droit,
+.surface_droite {
+    transform: translate(0%, -50%);
+}
+
+.but_gauche,
+.surface_gauche {
+    transform: translate(-100%, -50%);
+}
+
+.milieu {
+    position: fixed;
+    height: 100%;
+}
+
+/* ****************************************************************************** */
+
+/* forme et style */
+
+/* forme ronde */
+
+.rond_centrale,
+.penalty {
+    border-radius: 100%;
+}
+
+/* elements avec une bordure blanche */
+
+.but_droit,
+.but_gauche,
+.surface_droite,
+.surface_gauche,
+.arc_de_cercle_droit,
+.arc_de_cercle_gauche,
+.milieu,
+.rond_centrale {
+    border: solid 1px white;
+}
+
+/* ****************************************************************************** */
+
+/* tailles */
+
+/* taille des buts */
+
+.but_droit,
+.but_gauche {
+    width: 3%;
+    height: 25%;
+}
+
+/* taille de la surface de reparation */
+
+.surface_droite,
+.surface_gauche {
+    width: 12%;
+    height: 80%;
+}
+
+/* taille des arc de cercle */
+
+.rond_centrale {
+    width: 15%;
+    height: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.penalty {
+    width: 5%;
+    height: 3%;
+    background-color: white;
+}
+
+.arc_de_cercle_droit,
+.arc_de_cercle_gauche {
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    border-radius: 50% / 100% 100% 0 0;
+    border-bottom: none;
+    top: 45%;
+}
+
+/* position des arc de cercles */
+
+.arc_de_cercle_droit {
+    left: 9.5%;
+    transform: rotate(90deg);
+}
+
+.arc_de_cercle_gauche {
+    right: 9.5%;
+    transform: rotate(270deg);
+}
+
+#ball {
+    border-radius: 50px;
+    width: 4%;
+    height: 8%;
+    position: absolute;
+    -webkit-animation: mouvement 2s  forwards;
+}
+@-webkit-keyframes mouvement {
+    0% {
+        width: 8%;
+        height: 16%;
+        left:48%;
+        top:45%;
+        box-shadow: 8px 8px 40px #aaa;
+    }
+    20% {
+        left: 48%;
+        top:50%;
+        box-shadow: 4px 4px 4px #aaa;
+    }
+    40% {
+        left: 48%;
+        top:55s%;
+        box-shadow: 2px 2px 2px rgb(77, 77, 77);
+    }
+    60% {
+        left: 48%;
+        top:60s%;
+        box-shadow: 2px 2px 2px rgb(77, 77, 77);
+    }
+    80% {
+        left: 48%;
+        top:55s%;
+        box-shadow: 1px 1px 1px rgb(77, 77, 77);
+    }
+    100% {
+        left: 48%;
+        top:46.5%
+    }
+}
